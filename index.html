@@ -62,6 +62,11 @@ body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f0f4f8;d
 .news-item .url{font-size:11.5px;color:#3498db;margin-top:5px;word-break:break-all}
 .key-box{background:#eef7ff;border-left:3px solid #3498db;padding:8px 12px;margin-top:8px;font-size:13px;color:#1a5276;line-height:1.6;border-radius:0 6px 6px 0}
 .key-box b{color:#0d2137}
+/* 日报日期选择 */
+.date-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.date-chip{background:#fff;border:1.5px solid #d5e2ee;color:#3a5a76;border-radius:18px;padding:6px 14px;font-size:13px;cursor:pointer;transition:.12s}
+.date-chip:hover{border-color:#2980b9;color:#2980b9}
+.date-chip.active{background:#2980b9;border-color:#2980b9;color:#fff;font-weight:600}
 /* 英语 */
 .checkin-bar{display:flex;align-items:center;gap:16px;background:linear-gradient(90deg,#1a5276,#2980b9);color:#fff;border-radius:10px;padding:18px 22px;margin-bottom:18px;flex-wrap:wrap}
 .checkin-bar .info{flex:1;min-width:180px}
@@ -105,7 +110,7 @@ body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f0f4f8;d
 <script>
 const TITLES={ribao:"📋 生产日报",accidents:"⚠️ 民航维修事故",tech:"🔧 民航维修技术",english:"📖 民航英语学习",ai:"🤖 AI资讯"};
 const AUTO_SEC=600;
-let cur=(location.hash||"").replace("#","")||"ribao",DATA=null,cdTimer=null,cdLeft=AUTO_SEC;
+let cur=(location.hash||"").replace("#","")||"ribao",DATA=null,cdTimer=null,cdLeft=AUTO_SEC,curDate=null;
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const nl=s=>esc(s).replace(/\n/g,"<br>");
 
@@ -126,11 +131,21 @@ async function loadData(manual){
 
 function render(){
   const c=document.getElementById("content");
-  if(cur==="ribao")c.innerHTML=renderRibao(DATA.ribao);
+  if(cur==="ribao"){
+    const reps=DATA.daily_reports&&DATA.daily_reports.length?DATA.daily_reports:[DATA.ribao];
+    if(!curDate)curDate=reps[0].date;
+    c.innerHTML=renderDateBar(reps)+renderRibao(reps.find(r=>r.date===curDate)||reps[0]);
+  }
   else if(cur==="accidents")c.innerHTML=renderNews(DATA.accidents,false);
   else if(cur==="tech")c.innerHTML=renderNews(DATA.tech,false);
   else if(cur==="ai")c.innerHTML=renderNews(DATA.ai,true);
   else if(cur==="english")c.innerHTML=renderEnglish(DATA.english);
+}
+
+function renderDateBar(reps){
+  return '<div class="date-bar">'+reps.map(r=>
+    '<span class="date-chip '+(r.date===curDate?"active":"")+'" data-date="'+esc(r.date)+'">'+esc(r.date.slice(5).replace("-","."))+' '+esc(r.weekday||"")+'</span>'
+  ).join("")+'</div>';
 }
 
 function renderRibao(d){
@@ -194,6 +209,8 @@ document.addEventListener("click",e=>{
     ci.last=today;localStorage.setItem(CI_KEY,JSON.stringify(ci));
     render();
   }
+  const chip=e.target.closest?e.target.closest(".date-chip"):null;
+  if(chip){curDate=chip.dataset.date;render();return;}
   const ni=e.target.closest?e.target.closest(".nav-item"):null;
   if(ni){
     document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));
