@@ -120,14 +120,13 @@ body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f0f4f8;d
   <div class="topbar">
     <h2 id="secTitle">📋 生产日报</h2>
     <span class="updated" id="updatedAt">--</span>
-    <span class="countdown" id="cd"></span>
   </div>
   <div class="content" id="content"><div class="loading">数据加载中…</div></div>
 </div>
 <script>
 const TITLES={ribao:"📋 生产日报",accidents:"⚠️ 民航维修事故",tech:"🔧 民航维修技术",english:"📖 民航英语学习",ai:"🤖 AI资讯",weather:"🌤️ 天气"};
 const AUTO_SEC=600;
-let cur=(location.hash||"").replace("#","")||"ribao",DATA=null,cdTimer=null,cdLeft=AUTO_SEC,curDate=null;
+let cur=(location.hash||"").replace("#","")||"ribao",DATA=null,cdLeft=AUTO_SEC,curDate=null;
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const nl=s=>esc(s).replace(/\n/g,"<br>");
 
@@ -258,10 +257,9 @@ document.addEventListener("click",e=>{
   }
 });
 
-cdTimer=setInterval(()=>{
+setInterval(()=>{
   cdLeft--;
   if(cdLeft<=0){loadData();}
-  document.getElementById("cd").textContent="⏱ "+Math.floor(cdLeft/60)+":"+String(cdLeft%60).padStart(2,"0")+" 后自动刷新";
 },1000);
 if(TITLES[cur]){document.querySelectorAll(".nav-item").forEach(x=>x.classList.toggle("active",x.dataset.sec===cur));document.getElementById("secTitle").textContent=TITLES[cur];}else{cur="ribao";}loadData();
 </script>
