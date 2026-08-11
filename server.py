@@ -20,17 +20,24 @@ AUTO_MIN = 30
 sys.path.insert(0, HERE)
 import update_ribao
 import merge_data
+import fetch_news
 
-def do_update():
-    """完整更新链路: IMA下载解析 -> 合并 -> data.json; 返回状态字符串"""
+def do_update(include_news=False):
+    """完整更新链路: 日报(IMA) [+ 新闻(百度)] -> 合并 -> data.json; 返回状态字符串"""
+    parts = []
     r = update_ribao.run_update()
-    if r.startswith("OK"):
+    parts.append(r)
+    if include_news:
         try:
-            u = merge_data.merge()
-            return r + " | 已合并 data.json (" + u + ")"
+            parts.append(fetch_news.run())
         except Exception as e:
-            return r + " | 合并失败: " + str(e)
-    return r
+            parts.append("新闻失败: " + str(e))
+    try:
+        u = merge_data.merge()
+        parts.append("已合并 (" + u + ")")
+    except Exception as e:
+        parts.append("合并失败: " + str(e))
+    return " | ".join(parts)
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *a, **kw):
@@ -63,7 +70,7 @@ class Handler(SimpleHTTPRequestHandler):
     def do_POST(self):
         if self.path == "/api/refresh":
             try:
-                result = do_update()
+                result = do_update(include_news=True)
                 self._json({"ok": True, "result": result})
             except Exception as e:
                 self._json({"ok": False, "error": str(e)})
@@ -72,10 +79,13 @@ class Handler(SimpleHTTPRequestHandler):
             self.end_headers()
 
 def auto_loop():
+    # 日报每 AUTO_MIN(30)分钟检测; 新闻每 4 轮(约2小时)抓一次, 避免触发百度风控
+    tick = 0
     while True:
         time.sleep(AUTO_MIN * 60)
+        tick += 1
         try:
-            r = do_update()
+            r = do_update(include_news=(tick % 4 == 0))
             print(time.strftime("%H:%M:%S"), "自动更新:", r)
         except Exception as e:
             print("自动更新异常:", e)
@@ -121,8 +131,8 @@ if __name__ == "__main__":
         print("    然后在 exe 同目录的 config.json 中填写:")
         print('    {"client_id": "你的ClientID", "api_key": "你的APIKey"}')
         print("    填写后重新启动本程序。")
-    print("正在从 IMA 拉取最新日报...")
-    print(do_update())
+    print("正在从 IMA 拉取最新日报 + 百度资讯...")
+    print(do_update(include_news=True))
     threading.Thread(target=auto_loop, daemon=True).start()
     url = "http://127.0.0.1:" + str(PORT) + "/"
     try:
