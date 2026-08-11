@@ -21,12 +21,17 @@ sys.path.insert(0, HERE)
 import update_ribao
 import merge_data
 import fetch_news
+import fetch_weather
 
 def do_update(include_news=False):
     """完整更新链路: 日报(IMA) [+ 新闻(百度)] -> 合并 -> data.json; 返回状态字符串"""
     parts = []
     r = update_ribao.run_update()
     parts.append(r)
+    try:
+        parts.append(fetch_weather.run())
+    except Exception as e:
+        parts.append("天气失败: " + str(e))
     if include_news:
         try:
             parts.append(fetch_news.run())
