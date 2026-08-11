@@ -118,6 +118,10 @@ async function loadData(manual){
   const btn=document.getElementById("refreshBtn");
   btn.disabled=true;btn.classList.add("spin");
   try{
+    if(manual){
+      try{await fetch("/api/refresh",{method:"POST",cache:"no-store"});}
+      catch(e){/* 在线版(无本地服务)时忽略, 直接拉静态数据 */}
+    }
     const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});
     DATA=await r.json();
     document.getElementById("updatedAt").textContent="数据更新于 "+(DATA.updated||"未知");
