@@ -23,6 +23,7 @@ body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f0f4f8;d
 .topbar{background:#fff;padding:14px 26px;display:flex;align-items:center;gap:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);position:sticky;top:0;z-index:50}
 .topbar h2{font-size:18px;color:#0d2137;flex:1}
 .updated{font-size:12px;color:#8a97a5}
+.today-wx{font-size:14px;color:#2980b9;background:#eaf4fc;border:1px solid #cfe6f7;border-radius:14px;padding:3px 12px;margin-left:14px;white-space:nowrap}
 .countdown{font-size:12px;color:#3498db;min-width:88px;text-align:right}
 .btn{background:#2980b9;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13.5px;display:flex;align-items:center;gap:6px;transition:.15s}
 .btn:hover{background:#3498db}
@@ -112,19 +113,19 @@ body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f0f4f8;d
     <div class="nav-item" data-sec="tech"><span class="ico">🔧</span><span class="txt">民航维修技术</span></div>
     <div class="nav-item" data-sec="english"><span class="ico">📖</span><span class="txt">民航英语学习</span></div>
     <div class="nav-item" data-sec="ai"><span class="ico">🤖</span><span class="txt">AI资讯</span></div>
-    <div class="nav-item" data-sec="weather"><span class="ico">🌤️</span><span class="txt">天气</span></div>
   </div>
   <div class="side-foot">数据源：IMA知识库<br>贝迪克凌云（宜昌）</div>
 </nav>
 <div class="main">
   <div class="topbar">
     <h2 id="secTitle">📋 生产日报</h2>
+    <span class="today-wx" id="todayWx"></span>
     <span class="updated" id="updatedAt">--</span>
   </div>
   <div class="content" id="content"><div class="loading">数据加载中…</div></div>
 </div>
 <script>
-const TITLES={ribao:"📋 生产日报",accidents:"⚠️ 民航维修事故",tech:"🔧 民航维修技术",english:"📖 民航英语学习",ai:"🤖 AI资讯",weather:"🌤️ 天气"};
+const TITLES={ribao:"📋 生产日报",accidents:"⚠️ 民航维修事故",tech:"🔧 民航维修技术",english:"📖 民航英语学习",ai:"🤖 AI资讯"};
 const AUTO_SEC=600;
 let cur=(location.hash||"").replace("#","")||"ribao",DATA=null,cdLeft=AUTO_SEC,curDate=null;
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -135,11 +136,21 @@ async function loadData(){
     const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});
     DATA=await r.json();
     document.getElementById("updatedAt").textContent="数据更新于 "+(DATA.updated||"未知");
+    showTodayWx();
     render();
     cdLeft=AUTO_SEC;
   }catch(e){
     if(!DATA)document.getElementById("content").innerHTML='<div class="loading">⚠️ 数据加载失败：'+esc(e.message)+"</div>";
   }
+}
+
+function showTodayWx(){
+  const el=document.getElementById("todayWx");
+  const w=DATA&&DATA.weather;
+  if(cur==="ribao"&&w&&w.tempC){
+    el.textContent="🌤️ "+esc(w.desc)+" "+esc(w.tempC)+"°C";
+    el.style.display="";
+  }else{el.style.display="none";}
 }
 
 function render(){
@@ -153,7 +164,6 @@ function render(){
   else if(cur==="tech")c.innerHTML=renderNews(DATA.tech,false);
   else if(cur==="ai")c.innerHTML=renderNews(DATA.ai,true);
   else if(cur==="english")c.innerHTML=renderEnglish(DATA.english);
-  else if(cur==="weather")c.innerHTML=renderWeather(DATA.weather);
 }
 
 function renderDateBar(reps){
