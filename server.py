@@ -136,8 +136,14 @@ if __name__ == "__main__":
         print("    然后在 exe 同目录的 config.json 中填写:")
         print('    {"client_id": "你的ClientID", "api_key": "你的APIKey"}')
         print("    填写后重新启动本程序。")
-    print("正在从 IMA 拉取最新日报 + 百度资讯...")
-    print(do_update(include_news=True))
+    print("正在后台拉取最新日报 + 新闻 + 天气...")
+    # 关键: 先启动服务器(立即响应), 首次更新在后台线程执行, 避免浏览器打开时白屏
+    def first_update():
+        try:
+            print(do_update(include_news=True))
+        except Exception as e:
+            print("首次更新异常:", e)
+    threading.Thread(target=first_update, daemon=True).start()
     threading.Thread(target=auto_loop, daemon=True).start()
     url = "http://127.0.0.1:" + str(PORT) + "/"
     try:
@@ -145,7 +151,7 @@ if __name__ == "__main__":
     except Exception:
         pass
     print("已打开浏览器:", url)
-    print("提示: 关闭本窗口即退出服务; 页面「刷新数据」按钮会即时从 IMA 拉取最新")
+    print("提示: 关闭本窗口即退出服务; 数据自动更新(日报30分钟/新闻2小时/天气30分钟)")
     try:
         ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()
     except OSError as e:
