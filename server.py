@@ -80,6 +80,24 @@ def auto_loop():
         except Exception as e:
             print("自动更新异常:", e)
 
+BUILTIN_FILES = ["index.html", "news.json", "english.json"]
+
+def ensure_static():
+    """exe 被单独复制到任意目录时, 自动从内置资源补全必需文件(单文件可运行)"""
+    meipass = getattr(sys, "_MEIPASS", None)
+    if not meipass:
+        return
+    for fn in BUILTIN_FILES:
+        dst = os.path.join(HERE, fn)
+        if not os.path.exists(dst):
+            src = os.path.join(meipass, fn)
+            if os.path.exists(src):
+                try:
+                    shutil.copy2(src, dst)
+                    print("[自动补全]", fn, "->", HERE)
+                except Exception as e:
+                    print("补全失败:", fn, e)
+
 def check_cred():
     try:
         update_ribao.load_cred("client_id")
@@ -89,6 +107,8 @@ def check_cred():
         return False
 
 if __name__ == "__main__":
+    import shutil
+    ensure_static()
     print("=" * 54)
     print("  贝迪克凌云工作台 本地版")
     print("  数据源: IMA 共享知识库「共享测试」")
