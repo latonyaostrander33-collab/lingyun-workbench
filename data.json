@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10 22:06",
+  "updated": "2026-08-11 08:41",
   "ribao": {
     "date": "2026-08-09",
     "weekday": "星期日",
@@ -589,185 +589,185 @@
   ],
   "accidents": [
     {
-      "title": "致航班延误17分钟，一资深机务被解雇！后获赔4万澳元",
+      "title": "致航班延误17分钟,一资深机务被解雇!",
       "url": "https://m.thepaper.cn/newsDetail_forward_33712212",
       "source": "澎湃新闻",
-      "date": "2026-08-04",
-      "summary": "一名澳大利亚资深飞机维修工程师因被指导致新加坡航空航班延误17分钟遭解雇，近日获得4万澳元赔偿。该工程师曾通过关闭并重启飞机电源清除机载系统故障提示，操作事先已获机组同意，但新航方面认定违规。"
+      "date": "7天前",
+      "summary": "据外媒报道,一名资深澳大利亚飞机维修工程师因被指导致新加坡航空一架航班延误17分钟而遭解雇"
     },
     {
-      "title": "民航局公布亚心通航事故调查处理报告：直升机液压系统失效系直接原因",
+      "title": "民航局公布亚心通航事故调查处理报告,直升机液压系统失效系直接原因",
       "url": "https://baijiahao.baidu.com/s?id=1851565554834382206&wfr=spider&for=pc",
       "source": "北京商报",
-      "date": "2025-12-15",
-      "summary": "调查认定维修放行人员对事故承担直接责任；公司法人、总经理兼运行副总承担主要管理责任；维修副总兼维修主管承担次要管理责任。典型维修管理责任案例。"
+      "date": "2025年12月15日",
+      "summary": "维修放行人员对事故发生承担直接责任"
     },
     {
-      "title": "波音787-8梦想客机在复活节岛出意外：客梯车撕裂L2舱门",
-      "url": "https://baijiahao.baidu.com/s?id=1866890337095784131&wfr=spider&for=pc",
-      "source": "快科技",
-      "date": "2026-06-02",
-      "summary": "拉美航空一架波音787-8在智利复活节岛马塔维里机场发生地面事故：客梯车作业失误撕裂飞机L2舱门，飞机被迫滞留全球最偏远机场。地面保障作业安全警示。"
-    },
-    {
-      "title": "韩飞行员违规\"拍纪念照\"致战机相撞，事故被隐瞒超四年",
+      "title": "韩飞行员违规拍纪念照致战机相撞,事故被隐瞒超四年",
       "url": "https://www.guancha.cn/internation/2026_04_24_814788.shtml",
       "source": "观察者网",
-      "date": "2026-04-24",
-      "summary": "韩国空军披露一起被隐瞒超过4年的撞机事故：F-15K飞行员为拍摄纪念照导致两机相撞，暴露安全管理与信息瞒报问题。"
+      "date": "",
+      "summary": "4月24日韩国空军F-15K飞行员为拍纪念照导致撞机,事故被隐瞒超四年"
     },
     {
-      "title": "南航一波音787飞机疑似发生擦尾事故，知情人士：维修难度很大",
+      "title": "波音787-8客机在复活节岛出意外:被迫滞留全球最偏远机场",
+      "url": "https://baijiahao.baidu.com/s?id=1866890337095784131&wfr=spider&for=pc",
+      "source": "快科技",
+      "date": "",
+      "summary": "6月2日拉美航空波音787-8客机在复活节岛客梯车失误撕裂L2舱门"
+    },
+    {
+      "title": "南航787飞机疑似发生擦尾事故,维修难度很大",
       "url": "https://baijiahao.baidu.com/s?id=1813802434348401521&wfr=spider&for=pc",
       "source": "新浪财经",
-      "date": "2024-10-24",
-      "summary": "该航班着陆中发生弹跳导致擦尾。擦尾事故维修涉及尾部结构检查与蒙皮更换，维修难度大、周期长。"
+      "date": "2024年10月24日",
+      "summary": "该航班着陆中发生弹跳,副驾驶慌张中拉了杆"
     },
     {
-      "title": "民航西南局通报藏航客机冲出跑道事故调查进展：已查明原因",
-      "url": "https://www.thepaper.cn/newsDetail_forward_24124281",
-      "source": "澎湃新闻",
-      "date": "2023-08-05",
-      "summary": "藏航客机冲出跑道事故调查进展公布，事发一年后律师申请政府信息公开推动通报，完整调查报告披露原因。"
+      "title": "东航MU5735航空器飞行事故调查进展",
+      "url": "https://baijiahao.baidu.com/s?id=1794041128023205598&wfr=spider&for=pc",
+      "source": "大皖新闻",
+      "date": "2024年3月20日",
+      "summary": "民航局通报东航MU5735事故调查进展"
     }
   ],
   "tech": [
     {
-      "title": "滇中新区领导调研昆明长水国际机场航空维修产业发展情况",
+      "title": "滇中新区调研昆明长水机场航空维修产业发展",
       "url": "https://www.km.gov.cn/c/2026-08-10/5103492.shtml",
-      "source": "昆明市政府",
-      "date": "2026-08-10",
-      "summary": "8月6日调研东方航空技术云南分公司、云南空港飞机维修服务有限公司，推进长水机场航空维修产业进展。"
+      "source": "昆明市人民政府",
+      "date": "昨天10:02",
+      "summary": "杨东伟率队调研东航技术云南分公司和空港飞机维修公司"
     },
     {
-      "title": "我在济南修飞机！这家\"飞机医院\"医生不一般",
+      "title": "我在济南修飞机!这家飞机医院医生不一般",
       "url": "https://www.dzwww.com/xinwen/jishixinwen/202608/t20260808_18004535.htm",
       "source": "大众网",
-      "date": "2026-08-08",
-      "summary": "飞机检修如同人体检：大到发动机和轮胎，小到一颗拇指大的螺丝，都要求细致入微。走近机务维修一线。"
+      "date": "3天前",
+      "summary": "检修是飞机必经环节,大到发动机和轮胎,小到拇指大的螺丝"
     },
     {
-      "title": "南航工程技术航空维修服务与战新产品推介会举办",
+      "title": "南航工程技术维修服务与战新产品推介会举办",
       "url": "http://www.caacnews.com.cn/1/6/202606/t20260618_1395631_wap.html",
-      "source": "中国民航报",
-      "date": "2026-06-18",
-      "summary": "新疆民航维修领域高规格国际专业推介活动，南航工程技术展示航空维修服务与战略性新兴产品。"
+      "source": "中国民航网",
+      "date": "",
+      "summary": "6月18日推介会在新疆乌鲁木齐举行,是新疆民航维修领域高规格国际专业推介活动"
     },
     {
-      "title": "南航工程技术：以创新驱动引领航空维修业高质量发展",
+      "title": "南航工程技术:以创新驱动引领航空维修业高质量发展",
       "url": "https://www.zgjtb.com/2026-01/14/content_502722.html",
       "source": "中国交通报",
-      "date": "2026-01-14",
-      "summary": "自研数字化管理平台TAOIX全面投用重塑维修生态；在飞机零部件领域构建本土化民航产品供应体系，推动自主研制零部件开发。"
+      "date": "",
+      "summary": "1月14日南航技术承接战略性新兴产业项目,推动自主研制零部件开发,数字化管理平台TAOIX全面投入"
     },
     {
-      "title": "甘肃省民航机场集团飞机维修分公司承接C909飞机航线维修放行工作",
+      "title": "甘肃省民航承接C909飞机航线维修放行工作",
       "url": "http://gs.people.com.cn/n2/2026/0331/c183283-41539170.html",
-      "source": "人民网甘肃",
-      "date": "2026-03-31",
-      "summary": "成功承接国产C909飞机航线维修放行工作，国产支线客机常态化进驻甘肃民航市场，维修保障能力获突破。"
+      "source": "人民网",
+      "date": "",
+      "summary": "3月31日成功承接国产C909飞机航线维修放行工作"
     },
     {
-      "title": "华东局组织召开民航华东地区机务维修工作研讨会",
+      "title": "华东局组织民航华东地区机务维修工作研讨会",
       "url": "https://www.caac.gov.cn/PHONE/GLJ_PHONE/HDGLJ/HD_XWZX/202601/t20260108_229719.html",
-      "source": "民航华东局",
-      "date": "2026-01-08",
-      "summary": "回顾2025年华东机务安全态势，运输航司维修副总、总工程师及机体、发动机维修单位参会研讨。"
+      "source": "民航局",
+      "date": "",
+      "summary": "1月8日回顾2025年华东机务安全态势及重点工作"
     }
   ],
   "ai": [
     {
-      "title": "AI从\"建好\"加快转向\"用好\"",
-      "url": "https://baijiahao.baidu.com/s?id=1872472149183665765&wfr=spider&for=pc",
-      "source": "百度百家号",
-      "date": "2026-08-03",
-      "key": "我国深入实施\"人工智能+\"行动，\"十五五\"末AI相关产业规模将达10万亿元以上；中国政企AI部署规模今年达1850亿元，同比增长58%。"
+      "title": "北京AI方案走向全球",
+      "url": "https://baijiahao.baidu.com/s?id=1873179999890770324&wfr=spider&for=pc",
+      "source": "百家号",
+      "date": "1小时前",
+      "key": "机器人、AI和创新药成为出海新新三样,从哈萨克斯坦AI课堂到泰国水务系统全面落地"
     },
     {
-      "title": "打通AI进工厂的\"最后一公里\"",
-      "url": "https://baijiahao.baidu.com/s?id=1872574719469673643&wfr=spider&for=pc",
-      "source": "社评",
-      "date": "2026-08-04",
-      "key": "2026世界人工智能大会上厂商不再晒参数比跑分，转向能订酒店的手机智能体、流水线自主装配机械臂、巡检机器人等落地应用。"
+      "title": "以人工智能+激活高质量发展新动能",
+      "url": "https://www.bjnews.com.cn/detail/1786404040129904.html",
+      "source": "新京报",
+      "date": "1小时前",
+      "key": "国家科技成果转化引导基金加大AI核心赛道投入,培育AI独角兽和专精特新企业"
     },
     {
-      "title": "300余项AI应用落地新型电力系统",
-      "url": "https://baijiahao.baidu.com/s?id=1872855884943418411&wfr=spider&for=pc",
-      "source": "百度百家号",
-      "date": "2026-08-07",
-      "key": "边缘AI重构巡检体系：设备缺陷智能识别覆盖率近100%、准确率超99%，评估时长从数小时压缩至十分钟内，AI自主巡检替代六成以上重复人工。"
+      "title": "山东规范中小学AI通识教育 严禁AI代写作业",
+      "url": "https://baijiahao.baidu.com/s?id=1873183272401009969&wfr=spider&for=pc",
+      "source": "百家号",
+      "date": "34分钟前",
+      "key": "山东明确严禁教师以AI替代备课授课、学生以AI代写作业"
     },
     {
-      "title": "以开源消弭鸿沟，中国AI的\"迭代逻辑\"",
-      "url": "http://baijiahao.baidu.com/s?id=1872552266327088817&wfr=spider&for=pc",
-      "source": "百度百家号",
-      "date": "2026-08-04",
-      "key": "斯坦福2026年AI指数：到2026年3月中美顶尖模型性能差距已缩小至2.7%，中国牢固确立全球AI强国地位。"
+      "title": "四川14家企业组团亮相世界人工智能大会",
+      "url": "https://www.most.gov.cn/dfkj/sc/zxdt/202608/t20260803_197123.html",
+      "source": "科技部",
+      "date": "8天前",
+      "key": "携30余件创新产品亮相2026 WAIC,与全球顶尖企业同场竞技"
     },
     {
-      "title": "\"技术快跑、规则慢行\"矛盾日益突出，如何破解人工智能风险？",
-      "url": "https://baijiahao.baidu.com/s?id=1872728872111271453&wfr=spider&for=pc",
-      "source": "百度百家号",
-      "date": "2026-08-06",
-      "key": "AI风险具全域渗透性和传导性，从数据安全、隐私保护、经济依附、军事应用等维度勾勒AI时代风险图谱。"
+      "title": "从工具到伙伴,AI已经进化成这样了",
+      "url": "https://baijiahao.baidu.com/s?id=1873142162882491571&wfr=spider&for=pc",
+      "source": "百家号",
+      "date": "昨天21:12",
+      "key": "中国AI以AI在一起的姿态回应人工智能时代之问"
     },
     {
-      "title": "接连攻克数学难题！AI真的会取代科学家吗？",
-      "url": "https://baijiahao.baidu.com/s?id=1872658753842239023&wfr=spider&for=pc",
-      "source": "百度百家号",
-      "date": "2026-08-05",
-      "key": "AI在数学领域表现亮眼引发\"AI会不会取代科学家\"讨论；目前科研智能体主要生活在数字世界，依赖人类搭建研究环境。"
+      "title": "寻求AI使用与版权保护的动态平衡",
+      "url": "https://baijiahao.baidu.com/s?id=1872725317133879143&wfr=spider&for=pc",
+      "source": "百家号",
+      "date": "5天前",
+      "key": "探讨AI生成内容的版权归属、标识规范与训练语料保护机制"
     }
   ],
   "english": {
-    "date": "2026-08-10",
-    "theme": "机务维修常用英语 · 第1期",
+    "date": "2026-08-11",
+    "theme": "机务维修常用英语 · 第2期",
     "words": [
       {
-        "en": "airworthiness",
-        "cn": "适航性",
-        "eg": "The aircraft must maintain airworthiness at all times."
+        "en": "overhaul",
+        "cn": "大修/翻修",
+        "eg": "The engine is scheduled for overhaul at 10,000 flight hours."
       },
       {
-        "en": "discrepancy",
-        "cn": "差异/故障缺陷（NRC常用）",
-        "eg": "Record any discrepancy found during inspection."
+        "en": "troubleshooting",
+        "cn": "排故/故障诊断",
+        "eg": "Troubleshooting the avionics system took about two hours."
       },
       {
-        "en": "rectification",
-        "cn": "排除/纠正措施",
-        "eg": "Rectification was completed per AMM Task 32-11-00."
+        "en": "bulletin",
+        "cn": "通告/服务通告(SB)",
+        "eg": "Check the latest Service Bulletin before performing the mod."
       },
       {
-        "en": "torque",
-        "cn": "力矩/扭矩",
-        "eg": "Apply torque of 50 N·m to the bolt."
+        "en": "defect",
+        "cn": "缺陷/故障",
+        "eg": "A minor defect was noted on the flap actuator."
       },
       {
-        "en": "inspection",
-        "cn": "检查",
-        "eg": "Perform a visual inspection of the landing gear."
+        "en": "maximum allowable",
+        "cn": "最大允许值",
+        "eg": "The wear must not exceed the maximum allowable limit."
       },
       {
-        "en": "corrosion",
-        "cn": "腐蚀",
-        "eg": "No corrosion was found on the wing spar."
+        "en": "deferred",
+        "cn": "推迟/保留(故障)",
+        "eg": "The defect was deferred per MEL Item 32-45-01."
       }
     ],
     "phrases": [
       {
-        "en": "Refer to the Aircraft Maintenance Manual (AMM).",
-        "cn": "参考飞机维护手册（AMM）。"
+        "en": "Ensure all safety precautions are followed before starting work.",
+        "cn": "开始工作前确保所有安全措施已到位。"
       },
       {
-        "en": "The part is beyond economical repair (BER).",
-        "cn": "该部件不具经济修理价值（BER）。"
+        "en": "The component has been removed and sent to the shop for repair.",
+        "cn": "该部件已拆下并送至车间维修。"
       },
       {
-        "en": "Sign off the log entry after task completion.",
-        "cn": "工作完成后签署记录。"
+        "en": "Carry out a functional test after reassembly.",
+        "cn": "重新组装后进行功能测试。"
       }
     ],
-    "tip": "每天10分钟：读3个单词 + 1个例句 + 默写1遍，坚持打卡！"
+    "tip": "发动机常见缩写: AMM(维护手册) / IPC(零件目录) / MEL(最低设备清单) / SB(服务通告)"
   }
 }
