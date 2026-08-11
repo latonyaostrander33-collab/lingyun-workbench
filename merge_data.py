@@ -21,10 +21,11 @@ def merge():
     news = load("news.json", {}) or {}
     eng = load("english.json", {}) or {}
     daily = load("daily_reports.json") if os.path.exists(os.path.join(HERE, "daily_reports.json")) else {"reports": []}
+    weather = load("weather.json", {}) or {}
     data = {"updated": datetime.now().strftime("%Y-%m-%d %H:%M"), "ribao": ribao,
             "daily_reports": daily.get("reports", []),
             "accidents": news.get("accidents", []), "tech": news.get("tech", []),
-            "ai": news.get("ai", []), "english": eng}
+            "ai": news.get("ai", []), "english": eng, "weather": weather}
     with open(os.path.join(HERE, "data.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     return data["updated"]
