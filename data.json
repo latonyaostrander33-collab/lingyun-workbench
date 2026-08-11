@@ -1,9 +1,9 @@
 {
-  "updated": "2026-08-11 09:25",
+  "updated": "2026-08-11 09:40",
   "ribao": {
-    "date": "2026-08-10",
-    "weekday": "星期一",
-    "sheet": "8.10",
+    "date": "2026-08-09",
+    "weekday": "星期日",
+    "sheet": "8.9",
     "zaixiu": "在修飞机  0 架",
     "fengcun": "封存飞机  6  架",
     "categories": [
@@ -33,7 +33,7 @@
       },
       {
         "name": "本周AOG值班车间",
-        "value": "五车间\n杨佳睿\n18672652223"
+        "value": "五车间\n曾祥浩\n13392602481"
       },
       {
         "name": "备注",
@@ -46,85 +46,23 @@
       "3、当阳支援：当阳今日15人，F-01整机喷标识LOGO；C-103整机喷标识，喷说明字。"
     ],
     "io": {
-      "yesterday_label": "2026年08月09日 昨日",
+      "yesterday_label": "2026年08月08日 昨日",
       "yesterday": "无",
-      "today_label": "2026年08月010日 今日",
+      "today_label": "2026年08月09日 今日",
       "today": "无",
-      "tomorrow_label": "2026年08月11日 明日",
+      "tomorrow_label": "2026年08月10日 明日",
       "tomorrow": "无",
       "note": ""
     },
     "preparer": "编写 PREPARE          陈洋",
     "reviewer": "审核 REVIEW          史彩俊",
-    "total_sheets": 10,
+    "total_sheets": 9,
     "hidden_sheets": 194,
-    "visible_range": "7.26 ~ 8.10",
+    "visible_range": "7.26 ~ 8.9",
     "source": "IMA知识库「共享测试」/2026年贝迪克凌云生产日报.xlsx",
-    "parsed_at": "2026-08-11T09:25:56"
+    "parsed_at": "2026-08-11T09:40:16"
   },
   "daily_reports": [
-    {
-      "date": "2026-08-10",
-      "weekday": "星期一",
-      "sheet": "8.10",
-      "zaixiu": "在修飞机  0 架",
-      "fengcun": "封存飞机  6  架",
-      "categories": [
-        {
-          "name": "整机大修/航线",
-          "value": "N/A"
-        },
-        {
-          "name": "外航整机大修客改货",
-          "value": "N/A"
-        },
-        {
-          "name": "老龄飞机整机大修",
-          "value": "N/A"
-        },
-        {
-          "name": "喷漆",
-          "value": "N/A"
-        },
-        {
-          "name": "拆解/退租",
-          "value": "N/A"
-        },
-        {
-          "name": "封存/停放",
-          "value": "吉祥B-32HT\n吉祥B-32EJ \n吉祥B-324C      吉祥B-32EG   吉祥B-32JP\n吉祥B-30FC"
-        },
-        {
-          "name": "本周AOG值班车间",
-          "value": "五车间\n杨佳睿\n18672652223"
-        },
-        {
-          "name": "备注",
-          "value": "在场拆解飞机机壳2架；\n在场新舟停工飞机7架；"
-        }
-      ],
-      "minutes": [
-        "1、吉祥封存：N/A",
-        "2、阳逻支援：阳逻今日6人，A-165舱门喷漆；B-33后大门打磨清洁喷漆。",
-        "3、当阳支援：当阳今日15人，F-01整机喷标识LOGO；C-103整机喷标识，喷说明字。"
-      ],
-      "io": {
-        "yesterday_label": "2026年08月09日 昨日",
-        "yesterday": "无",
-        "today_label": "2026年08月010日 今日",
-        "today": "无",
-        "tomorrow_label": "2026年08月11日 明日",
-        "tomorrow": "无",
-        "note": ""
-      },
-      "preparer": "编写 PREPARE          陈洋",
-      "reviewer": "审核 REVIEW          史彩俊",
-      "total_sheets": 10,
-      "hidden_sheets": 194,
-      "visible_range": "7.26 ~ 8.10",
-      "source": "IMA知识库「共享测试」/2026年贝迪克凌云生产日报.xlsx",
-      "parsed_at": "2026-08-11T09:25:56"
-    },
     {
       "date": "2026-08-09",
       "weekday": "星期日",
@@ -180,7 +118,12 @@
         "note": ""
       },
       "preparer": "编写 PREPARE          陈洋",
-      "reviewer": "审核 REVIEW          史彩俊"
+      "reviewer": "审核 REVIEW          史彩俊",
+      "total_sheets": 9,
+      "hidden_sheets": 194,
+      "visible_range": "7.26 ~ 8.9",
+      "source": "IMA知识库「共享测试」/2026年贝迪克凌云生产日报.xlsx",
+      "parsed_at": "2026-08-11T09:40:16"
     },
     {
       "date": "2026-08-08",
