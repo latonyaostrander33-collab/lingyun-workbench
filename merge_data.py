@@ -8,15 +8,18 @@ if getattr(sys, "frozen", False):
 else:
     HERE = os.path.dirname(os.path.abspath(__file__))
 
-def load(n):
-    with open(os.path.join(HERE, n), encoding="utf-8") as f:
-        return json.load(f)
+def load(n, default=None):
+    try:
+        with open(os.path.join(HERE, n), encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
 
 def merge():
     """合并三份JSON为 data.json, 返回 updated 时间字符串"""
     ribao = load("ribao.json")
-    news = load("news.json")
-    eng = load("english.json")
+    news = load("news.json", {}) or {}
+    eng = load("english.json", {}) or {}
     daily = load("daily_reports.json") if os.path.exists(os.path.join(HERE, "daily_reports.json")) else {"reports": []}
     data = {"updated": datetime.now().strftime("%Y-%m-%d %H:%M"), "ribao": ribao,
             "daily_reports": daily.get("reports", []),
