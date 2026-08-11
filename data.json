@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11 08:41",
+  "updated": "2026-08-11 09:02",
   "ribao": {
     "date": "2026-08-09",
     "weekday": "星期日",
@@ -59,8 +59,8 @@
     "total_sheets": 9,
     "hidden_sheets": 194,
     "visible_range": "7.26 ~ 8.9",
-    "source": "2026年贝迪克凌云生产日报.xlsx1.xlsx",
-    "parsed_at": "2026-08-10T17:10:16"
+    "source": "IMA知识库「共享测试」/2026年贝迪克凌云生产日报.xlsx",
+    "parsed_at": "2026-08-11T09:01:54"
   },
   "daily_reports": [
     {
@@ -122,8 +122,8 @@
       "total_sheets": 9,
       "hidden_sheets": 194,
       "visible_range": "7.26 ~ 8.9",
-      "source": "_test_modified.xlsx",
-      "parsed_at": "2026-08-10T17:25:24"
+      "source": "IMA知识库「共享测试」/2026年贝迪克凌云生产日报.xlsx",
+      "parsed_at": "2026-08-11T09:01:54"
     },
     {
       "date": "2026-08-08",
